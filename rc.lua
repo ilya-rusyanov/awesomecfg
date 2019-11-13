@@ -585,6 +585,7 @@ awful.util.spawn_with_shell("xrdb ~/.Xresources")
 awful.spawn.single_instance("/usr/lib/geoclue-2.0/demos/agent")
 awful.spawn.single_instance("nm-applet")
 awful.spawn.single_instance("xiccd")
+awful.spawn.single_instance("xset s 300")
 local redshift = require("redshift")
 
 -- set binary path (optional)
