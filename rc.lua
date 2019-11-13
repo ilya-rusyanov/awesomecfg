@@ -580,7 +580,7 @@ awful.spawn("xinput set-int-prop \"SynPS/2 Synaptics TouchPad\" \"Synaptics Tap 
 -- enable vertical horizontal corner scrolling
 awful.spawn("xinput set-int-prop \"SynPS/2 Synaptics TouchPad\" \"Synaptics Edge Scrolling\" 1, 1, 1")
 awful.spawn("xinput set-int-prop \"SynPS/2 Synaptics TouchPad\" \"Synaptics Palm Detection\" 1")
-awful.spawn.single_instance("blueproximity")
+--awful.spawn.single_instance("blueproximity")
 awful.util.spawn_with_shell("xrdb ~/.Xresources")
 awful.spawn.single_instance("/usr/lib/geoclue-2.0/demos/agent")
 awful.spawn.single_instance("nm-applet")
