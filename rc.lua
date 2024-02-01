@@ -573,7 +573,6 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
-awful.spawn("gnome-screensaver")
 -- Set 1 2 and 3 finger taps
 awful.spawn("xinput set-int-prop \"SynPS/2 Synaptics TouchPad\" \"Synaptics Tap Action\" 8 0 0 0 0 1 3 2")
 -- enable vertical horizontal corner scrolling
