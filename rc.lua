@@ -356,6 +356,11 @@ globalkeys = awful.util.table.join(
     awful.key({ }, "XF86AudioRaiseVolume",  APW.Up),
     awful.key({ }, "XF86AudioLowerVolume",  APW.Down),
     awful.key({ }, "XF86AudioMute",         APW.ToggleMute),
+    -- large headphones
+    awful.key({modkey }, "a", function () awful.spawn("bluetoothctl connect D0:C8:57:18:20:1B") end),
+    -- small headphones
+    awful.key({modkey }, "z", function () awful.spawn("bluetoothctl connect F8:4E:17:2B:61:82") end),
+    -- xrandr
     awful.key({ modkey, "Shift" }, "x", function() xrandr.xrandr() end),
     -- printscreen
     awful.key({ }, "Print", function () awful.spawn("ksnip -f") end,
