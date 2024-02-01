@@ -581,17 +581,14 @@ awful.spawn("xinput set-int-prop \"SynPS/2 Synaptics TouchPad\" \"Synaptics Tap 
 awful.spawn("xinput set-int-prop \"SynPS/2 Synaptics TouchPad\" \"Synaptics Edge Scrolling\" 1, 1, 1")
 awful.spawn("xinput set-int-prop \"SynPS/2 Synaptics TouchPad\" \"Synaptics Palm Detection\" 1")
 --awful.spawn.single_instance("blueproximity")
-awful.util.spawn_with_shell("xrdb ~/.Xresources")
+awful.spawn.with_shell("xrdb ~/.Xresources")
 awful.spawn.single_instance("/usr/lib/geoclue-2.0/demos/agent")
 awful.spawn.single_instance("nm-applet")
 awful.spawn.single_instance("xiccd")
 awful.spawn.single_instance("xset s 300")
 awful.spawn.single_instance("xss-lock -- slock")
-local redshift = require("redshift")
-
--- set binary path (optional)
-redshift.redshift = "/usr/bin/redshift"
--- set additional redshift arguments (optional)
---redshift.options = "-c ~/.config/redshift.conf"
--- 1 for dim, 0 for not dimmed
---redshift.init(1)
+awful.spawn.single_instance("smart-notifier")
+awful.spawn.single_instance("xbanish -i mod4")
+awful.spawn.single_instance("redshift")
+awful.spawn.single_instance("blueman-applet")
+awful.spawn.single_instance("setxkbmap -layout us,ru -option grp:caps_toggle,grp_led:caps,compose:menu")
