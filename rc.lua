@@ -118,7 +118,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- }}}
 
 -- Keyboard map indicator and switcher
--- mykeyboardlayout = awful.widget.keyboardlayout()
+mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
@@ -222,7 +222,7 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            -- mykeyboardlayout,
+            mykeyboardlayout,
             apw,
             wibox.widget.systray(),
             mytextclock,
