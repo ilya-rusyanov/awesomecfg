@@ -245,7 +245,7 @@ local xrandr = require("xrandr")
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift" }, "x", function() xrandr.xrandr() end),
-    awful.key({ modkey,           }, "F12", function () awful.util.spawn("slock")          end,
+    awful.key({ modkey, "Control" }, "l", function () awful.util.spawn("slock")          end,
               { description = "lock screen" }),
 
     awful.key({ }, "XF86MonBrightnessDown", function ()
