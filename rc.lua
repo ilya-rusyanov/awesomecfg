@@ -363,14 +363,14 @@ globalkeys = awful.util.table.join(
     -- xrandr
     awful.key({ modkey, "Shift" }, "x", function() xrandr.xrandr() end),
     -- printscreen
-    awful.key({ }, "Print", function () awful.spawn("ksnip -f") end,
-        {description = "Take a screenshot of entire screen", group = "screenshot"}),
-    awful.key({ modkey, }, "Print", function () awful.spawn("ksnip -r") end,
+--    awful.key({ }, "Print", function () awful.spawn("ksnip -f") end,
+--        {description = "Take a screenshot of entire screen", group = "screenshot"}),
+    awful.key({ modkey, }, "Print", function () awful.spawn("flameshot gui") end,
         {description = "Take a screenshot of selection", group = "screenshot"}),
-    awful.key({ "Shift" }, "Print", function () awful.spawn("ksnip -a") end,
-        {description = "Take a screenshot of focused window", group = "screenshot"}),
-    awful.key({ "Ctrl" }, "Print", function () awful.spawn("ksnip -d 3") end,
-        {description = "Take a screenshot of delay", group = "screenshot"}),
+--    awful.key({ "Shift" }, "Print", function () awful.spawn("ksnip -a") end,
+--        {description = "Take a screenshot of focused window", group = "screenshot"}),
+--    awful.key({ "Ctrl" }, "Print", function () awful.spawn("ksnip -d 3") end,
+--        {description = "Take a screenshot of delay", group = "screenshot"}),
     -- redshift
     awful.key({ modkey }, "d",          function ()
         awful.util.spawn("pkill -USR1 redshift") end)
